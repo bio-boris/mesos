@@ -1,4 +1,4 @@
-docker run -d —-network=host --name some-zookeeper --restart always -d zookeeper
+docker run -d —-network=host --name some-zookeeper --restart always zookeeper
 
 docker run -d --network=host -p 8080:8080 --privileged  mesosphere/marathon --master local --zk zk://localhost:2181/marathon
 
