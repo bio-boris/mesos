@@ -32,3 +32,6 @@ docker run -d --network=host  --privileged \
   -v /sys:/sys \
   -v /usr/local/bin/docker:/usr/local/bin/docker \
   mesosphere/mesos-slave:1.5.0 --master=zk://localhost:2181/mesos
+
+//Chronos
+docker run -d --net=host -e PORT0=8082 -e PORT1=8083 mesosphere/chronos:v3.0.2 --zk_hosts localhost:2181 --master zk://localhost:2181/mesos
